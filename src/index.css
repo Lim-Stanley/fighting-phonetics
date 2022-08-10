@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+th{
+  user-select: none;
+}
+
 .cons-table{
   border-collapse: collapse;
 }
@@ -7,5 +17,15 @@
 }
 
 .symbol.filled{
+  cursor: pointer;
+}
+
+.selected{
+  background-color: #55c1ffff;
+}
+
+.play-button{
+  width: 15vw;
+  height: auto;
   cursor: pointer;
 }

@@ -1,7 +1,7 @@
 // Want to first set up pages
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import EngCons from "./components/EngCons";
-import HomePage from "./components/HomePage";
+import EngCons from "./pages/EngCons";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
