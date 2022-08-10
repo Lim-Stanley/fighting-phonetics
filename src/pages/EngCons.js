@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Table from "../components/Table";
 import PlayButton from '../images/play_button.png'
+import GrayedButton from '../images/grayed_button.png'
 import {sound} from '../commons/Sounds'
 
 const EngCons = () => {
@@ -70,6 +71,7 @@ const EngCons = () => {
       selRows.forEach((ind) => rows[ind].forEach(elem => s.add(elem)))
       selCols.forEach((ind) => cols[ind].forEach(elem => s.add(elem)))
       s.delete('')
+      if (s.size === 1) {return}
       const vals = []
       s.forEach(elem => Array.from(Array(weights[elem]).keys()).forEach(() => vals.push(elem)))
       let ans = vals[Math.floor(Math.random() * vals.length)]
@@ -100,7 +102,7 @@ const EngCons = () => {
       <Table toggle={toggle} setAll={selectAll} setRows={setRows} 
       handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
       inSelected={inSelected}/>
-      <img draggable={false} className = 'play-button' src={PlayButton} alt="Play Button" onClick={playSound}></img>
+      <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} alt="Play Button" onClick={playSound}></img>
     </>
   );
 };
