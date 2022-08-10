@@ -1,0 +1,4 @@
+Implement the selection mechanic -> if you touch a row/col, highlight it, and add it to 'symbols'
+Figure out how I'm going to implement the recommendation system. Make a class Recommendation, that 
+takes in a symbol list as its initializer
+Plan out all of the recommendation mechanics
