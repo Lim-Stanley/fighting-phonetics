@@ -1,11 +1,22 @@
 const WorkOnBox = ({history}) => {
-    const display = () => {
-
+    const getRecs = () => {
+      const ans = []
+      for (const [key, value] of Object.entries(history)){
+        if (value.correct / value.total < .8) {ans.push([key, value.correct, value.total, value.confusedWith])}
+      }
+      console.log(ans)
+      // If ans is none, display "start training" or something
+      return ans
     }
     return(
         <div className='to-work-on'>
-          <h1 className='work-on-title'>To Work On</h1>
+          <h1 key={-1} className='work-on-title'>To Work On</h1>
           <hr className='work-on-line'/>
+          <div className = "trouble-symbols">
+            {getRecs().map(([symbol, correct, total, confusedWith], index) => 
+            <h1 key={index}>{symbol} : {Math.floor(100 * (correct/ total))}% {correct} / {total} Confused with:
+            {Array.from(confusedWith).join(', ')}</h1>)}
+          </div>
         </div>
     )
 }

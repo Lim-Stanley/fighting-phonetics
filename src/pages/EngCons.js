@@ -23,7 +23,8 @@ const EngCons = () => {
     
     const initHistory = () => {
       let ans = {}
-      rows.forEach(row => row.forEach(elem => elem != '' ? ans[elem] = {correct: 0, total: 0, weight: 3} : null))
+      rows.forEach(row => row.forEach(elem => elem != '' ? ans[elem] = {correct: 0, total: 0, weight: 3, confusedWith : new Set()}
+       : null))
       return ans
     }
 
@@ -96,18 +97,22 @@ const EngCons = () => {
     }
 
     const clickProcess = (id) => {
+        if (!answer) {return}
         setGuess(id)
         setPrev(answer)
         setShowFeedback(true)
     }
 
-    const handleGuess = (symbol, weight, correct = true) => {
+    const handleGuess = (symbol, weight, correct = true, guess = '') => {
       const tot = history[symbol].total + 1
       const num_correct = history[symbol].correct + correct
-      history[symbol] = {correct : num_correct, total: tot, weight: weight}
+      const confusedWith = history[symbol].confusedWith
+      if (!correct) { confusedWith.add(guess)}
+      history[symbol] = {correct : num_correct, total: tot, weight: weight, confusedWith : confusedWith}
       setShowFeedback(false)
       setHistory(history)
     }
+    console.log(history)
 
     const answer = getSymbol()
   return (

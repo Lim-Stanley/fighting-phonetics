@@ -6,7 +6,7 @@ const Incorrect = ({prev, guess, handleGuess}) => {
             <h2>{guess}</h2>
             <h2>Answer:</h2>
             <h2>{prev}</h2>
-            <h2 onClick={() => handleGuess(prev, 3, false)}>Keep Practicing</h2>
+            <h2 onClick={() => handleGuess(prev, 3, false, guess)}>Keep Practicing</h2>
         </>
     )
 }

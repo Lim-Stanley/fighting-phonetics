@@ -69,7 +69,18 @@ td{
   text-align: center;
 }
 
+.trouble-symbols{
+  padding: 2%;
+  max-height: 78%;
+  overflow: scroll;
+}
+
+.trouble-symbols::-webkit-scrollbar{
+  display: none;
+}
+
 .work-on-title{
+  margin-top: 5%;
   font-size: 300%;
 }
 
