@@ -32,8 +32,6 @@ const EngCons = () => {
     const [showFeedback, setShowFeedback] = useState(false)
     const [selected, setSelected] = useState({rows: [], cols: []})
     const [hovering, setHovering] = useState({row: -2, col: -2})
-    const [hoverRow, setHoverRow] = useState(-2)
-    const [hoverCol, setHoverCol] = useState(-2)
     const [history, setHistory] = useState(initHistory())
 
     // Select all
@@ -63,18 +61,17 @@ const EngCons = () => {
 
     // Return whether a col or row is selected or not
     const inSelected = (isRow, index) => {
-      if (isRow){
-        return selected.rows.includes(index)
-      }
-      else{
-        return selected.cols.includes(index)
-      }
+      if (isRow){ return selected.rows.includes(index) }
+      else{ return selected.cols.includes(index) }
+    }
+
+    const isHovering = (isRow, index) => {
+      if (isRow){ return hovering.row == index }
+      else{ return hovering.col == index }
     }
 
     const getSymbol = () => {
       if (!selected.rows && !selected.cols){return}
-      // Uses all selected rows and cols, makes a set out of them. Then,
-      // Gets the respective weights. Then, makes an array. Finally, gets a random element from that array
       const s = new Set()
       selected.rows.forEach((ind) => rows[ind].forEach(elem => s.add(elem)))
       selected.cols.forEach((ind) => cols[ind].forEach(elem => s.add(elem)))
@@ -88,20 +85,19 @@ const EngCons = () => {
       }
       return ans
     }
-    const answer = getSymbol()
 
     // Play the selected sound
     let canPlay = true
     const playSound = () => {
       if (!canPlay) {return}
       canPlay = false
-      new Audio(sound[selected]).play()
+      new Audio(sound[answer]).play()
       setTimeout(() => canPlay = true, 1500)
     }
 
     const clickProcess = (id) => {
         setGuess(id)
-        setPrev(selected)
+        setPrev(answer)
         setShowFeedback(true)
     }
 
@@ -113,15 +109,7 @@ const EngCons = () => {
       setHistory(history)
     }
 
-    const isHovering = (isRow, index) => {
-      if (isRow){
-        return hovering.row == index
-      }
-      else{
-        return hovering.col == index
-      }
-    }
-
+    const answer = getSymbol()
   return (
     <div className='container'>
       <TopBar />
@@ -134,7 +122,7 @@ const EngCons = () => {
           <Table toggle={toggle} setAll={selectAll} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
           inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} />
-          <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} 
+          <img draggable={false} className = 'play-button' src={answer ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>
       </div>
