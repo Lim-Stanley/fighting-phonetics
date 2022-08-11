@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Table from "../components/Table";
+import Feedback from "../components/Feedback"
 import PlayButton from '../images/play_button.png'
 import GrayedButton from '../images/grayed_button.png'
 import {sound} from '../commons/Sounds'
@@ -25,6 +26,8 @@ const EngCons = () => {
 
     // REMEMBER TO SETPREV SOMEWHERE
     const [prev, setPrev] = useState(null)
+    const [guess, setGuess] = useState(false)
+    const [showFeedback, setShowFeedback] = useState(false)
     const [selRows, setRows] = useState([])
     const [selCols, setCols] = useState([])
     const [weights, setWeights] = useState(initWeights())
@@ -93,16 +96,34 @@ const EngCons = () => {
     }
 
     const clickProcess = (id) => {
-        console.log(id == selected)
+        setGuess(id)
+        setPrev(selected)
+        setShowFeedback(true)
     }
+
+    const updateWeights = (symbol, weight) => {
+      console.log(symbol, weight)
+      const newWeights = weights
+      weights[symbol] = weight
+      setWeights(newWeights)
+      setShowFeedback(false)
+    }
+
+    console.log(weights)
 
   return (
     <>
       <h1>This is the English Consonant Page</h1>
+      {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
+      updateWeights={updateWeights}/> :
+      <>
       <Table toggle={toggle} setAll={selectAll} setRows={setRows} 
       handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
       inSelected={inSelected}/>
-      <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} alt="Play Button" onClick={playSound}></img>
+      <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} 
+      alt="Play Button" onClick={playSound} />
+      </>
+      }
     </>
   );
 };
