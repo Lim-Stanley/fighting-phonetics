@@ -1,18 +1,17 @@
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 
-const Table = ({handleClick, headers, headings, rows, setRows, setCols, setWeights, setAll, toggle, inSelected,
-setHoverRow, setHoverCol, hoverRow, hoverCol}) => 
+const Table = ({handleClick, headers, headings, rows, setWeights, setAll, toggle, inSelected, isHovering, setHovering}) => 
 {
   return (
     <table className="cons-table">
         <tbody>
-        <TableHeader setAll={setAll} setCols={setCols} corner = 'All' headings = {headings} toggle={toggle} 
-        inSelected={inSelected} setHoverCol={setHoverCol} hoverCol={hoverCol}/>
+        <TableHeader setAll={setAll} corner = 'All' headings = {headings} toggle={toggle} 
+        inSelected={inSelected} isHovering={isHovering} setHovering={setHovering}/>
         {headers.map((head, index) =>
-        <TableRow setRows={setRows} setWeights={setWeights}
+        <TableRow setWeights={setWeights}
         key = {index} ind={index} handleClick = {handleClick} header = {head} columns = {rows[index]} 
-        toggle={toggle} inSelected={inSelected} setHoverRow={setHoverRow} hoverRow={hoverRow}/>
+        toggle={toggle} inSelected={inSelected} isHovering={isHovering} setHovering={setHovering}/>
         )}
         </tbody>
     </table>

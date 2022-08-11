@@ -1,4 +1,4 @@
-const Incorrect = ({prev, guess, updateWeights}) => {
+const Incorrect = ({prev, guess, handleGuess}) => {
     return (
         <>
             <h1>Incorrect!</h1>
@@ -6,7 +6,7 @@ const Incorrect = ({prev, guess, updateWeights}) => {
             <h2>{guess}</h2>
             <h2>Answer:</h2>
             <h2>{prev}</h2>
-            <h2 onClick={() => updateWeights(prev, 3)}>Keep Practicing</h2>
+            <h2 onClick={() => handleGuess(prev, 3, false)}>Keep Practicing</h2>
         </>
     )
 }

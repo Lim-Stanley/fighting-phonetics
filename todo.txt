@@ -11,3 +11,4 @@ Have symbols enlarge on hover
 Background Music
 Have a counter for how many reps someone has gotten (requires backend)
 Change play button art to a wug with a play button in the middle
+Indicate to the user for the first time that they can highlight a cell

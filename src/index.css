@@ -37,7 +37,7 @@ td{
 }
 
 .dropdowns{
-  width: 90%;
+  width: 95%;
   display:flex;
   align-items: row;
   justify-content: space-evenly;
@@ -48,8 +48,8 @@ td{
   text-align: center;
   width: 15%;
   height: 60%;
-  margin-top: 1%;
-  border-radius: 5% / 15%;
+  border-radius: 2% / 15%;
+  margin: 1%;
 }
 
 .display-body{
@@ -66,6 +66,18 @@ td{
   height:100%;
   border: thick solid #555b6eff;
   border-radius: 20% / 6%;
+  text-align: center;
+}
+
+.work-on-title{
+  font-size: 300%;
+}
+
+.work-on-line{
+  border: medium solid #555b6eff;
+  background-color: #555b6eff;
+  width: 102%;
+  margin-left: -1%;
 }
 
 .ipa-table{
