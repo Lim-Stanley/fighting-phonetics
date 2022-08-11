@@ -121,6 +121,7 @@ const EngCons = () => {
         <div className='to-work-on'>
         </div>
         <div className='ipa-table'>
+          <h1 className='page-title'>English Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} setRows={setRows} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
           inSelected={inSelected}/>

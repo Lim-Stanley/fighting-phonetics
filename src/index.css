@@ -4,8 +4,17 @@
   padding: 0;
 }
 
+table, th, td {
+  border: 1px solid;
+}
+
 th{
   user-select: none;
+  font-size: 175%;
+}
+
+td{
+  min-width: 1vw;
 }
 
 .container{
@@ -15,6 +24,7 @@ th{
 }
 
 .top-bar{
+  display:flex;
   width:100%;
   height:8%;
   background-color: #555b6eff;
@@ -24,6 +34,22 @@ th{
 .wug{
   height: 100%;
   width: auto;
+}
+
+.dropdowns{
+  width: 90%;
+  display:flex;
+  align-items: row;
+  justify-content: space-evenly;
+}
+
+.dropdown{
+  background-color: #55c1ffff;
+  text-align: center;
+  width: 15%;
+  height: 60%;
+  margin-top: 1%;
+  border-radius: 5% / 15%;
 }
 
 .display-body{
@@ -43,24 +69,50 @@ th{
 }
 
 .ipa-table{
+  display:flex;
   background-color: #ffd6ba;
   width: 82%;
   height: 100%;
   border: thick solid #555b6eff;
   border-radius: 8% / 15%;
   margin-left: 3%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
 }
+
+.page-title{
+  font-size: 400%;
+}
+
 
 .cons-table{
   border-collapse: collapse;
+  width: 100%;
+  height: 70%;
+  text-align: center;
+  border: medium solid;
 }
 
 .header{
   cursor: pointer;
 }
 
+.symbol{
+  font-size: 200%;
+}
+
 .symbol.filled{
   cursor: pointer;
+}
+
+.symbol.even-box{
+  border-right: none;
+}
+
+.symbol.odd-box{
+  border-left: none;
 }
 
 .selected{
@@ -68,7 +120,8 @@ th{
 }
 
 .play-button{
-  width: 15vw;
+  margin: 1%;
+  width: 10%;
   height: auto;
   cursor: pointer;
 }

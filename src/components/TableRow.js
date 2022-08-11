@@ -7,7 +7,9 @@ const TableRow = ({ header, columns, handleClick, toggle, ind, inSelected }) => 
       </th>
       {columns.map((col, index) => (
         <td key={index + 1} 
-        className={`symbol ${col != "" ? "filled" : ""} ${inSelected(true, ind) || inSelected(false, index) ? 'selected' : ''}`} 
+        className={`symbol ${col != "" ? "filled" : ""} 
+        ${inSelected(true, ind) || inSelected(false, index) ? 'selected' : ''}
+        ${index % 2 == 0 ? 'even-box' : 'odd-box'}`} 
         onClick = {() => handleClick(col)}>
           {col}
         </td>

@@ -10,3 +10,4 @@ When nothing is selected on a chart, have a floating arrow that will point to a 
 Have symbols enlarge on hover
 Background Music
 Have a counter for how many reps someone has gotten (requires backend)
+Change play button art to a wug with a play button in the middle
