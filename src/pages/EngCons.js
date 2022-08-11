@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Table from "../components/Table";
 import Feedback from "../components/Feedback"
+import TopBar from '../components/TopBar';
 import PlayButton from '../images/play_button.png'
 import GrayedButton from '../images/grayed_button.png'
 import {sound} from '../commons/Sounds'
@@ -112,19 +113,23 @@ const EngCons = () => {
     console.log(weights)
 
   return (
-    <>
-      <h1>This is the English Consonant Page</h1>
+    <div className='container'>
+      <TopBar />
       {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
       updateWeights={updateWeights}/> :
-      <>
-      <Table toggle={toggle} setAll={selectAll} setRows={setRows} 
-      handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
-      inSelected={inSelected}/>
-      <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} 
-      alt="Play Button" onClick={playSound} />
-      </>
+      <div className='display-body'>
+        <div className='to-work-on'>
+        </div>
+        <div className='ipa-table'>
+          <Table toggle={toggle} setAll={selectAll} setRows={setRows} 
+          handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
+          inSelected={inSelected}/>
+          <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} 
+          alt="Play Button" onClick={playSound} />
+        </div>
+      </div>
       }
-    </>
+    </div>
   );
 };
 

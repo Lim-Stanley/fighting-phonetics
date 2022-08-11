@@ -9,3 +9,4 @@ Make error message for when someone selects a row with only one symbol, telling 
 When nothing is selected on a chart, have a floating arrow that will point to a column or row
 Have symbols enlarge on hover
 Background Music
+Have a counter for how many reps someone has gotten (requires backend)
