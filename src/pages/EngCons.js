@@ -25,12 +25,13 @@ const EngCons = () => {
       return ans
     }
 
-    // REMEMBER TO SETPREV SOMEWHERE
     const [prev, setPrev] = useState(null)
     const [guess, setGuess] = useState(false)
     const [showFeedback, setShowFeedback] = useState(false)
     const [selRows, setRows] = useState([])
     const [selCols, setCols] = useState([])
+    const [hoverRow, setHoverRow] = useState(-2)
+    const [hoverCol, setHoverCol] = useState(-2)
     const [weights, setWeights] = useState(initWeights())
 
     // Select all
@@ -110,7 +111,7 @@ const EngCons = () => {
       setShowFeedback(false)
     }
 
-    console.log(weights)
+    console.log(`hover row is ${hoverRow}, hover col is ${hoverCol}`)
 
   return (
     <div className='container'>
@@ -124,7 +125,8 @@ const EngCons = () => {
           <h1 className='page-title'>English Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} setRows={setRows} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
-          inSelected={inSelected}/>
+          inSelected={inSelected} setHoverRow={setHoverRow} setHoverCol={setHoverCol}
+          hoverRow={hoverRow} hoverCol={hoverCol}/>
           <img draggable={false} className = 'play-button' src={selected ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>

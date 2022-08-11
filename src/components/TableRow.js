@@ -1,7 +1,10 @@
-const TableRow = ({ header, columns, handleClick, toggle, ind, inSelected }) => {
+const TableRow = ({ header, columns, handleClick, toggle, ind, inSelected, setHoverRow, hoverRow}) => {
   return (
     <tr>
-      <th key={ind} className={`header ${inSelected(true, ind) || inSelected(true, ind) ? 'selected' : ''}`} 
+      <th key={ind} className={`header ${inSelected(true, ind) || inSelected(true, ind) ? 'selected' : ''}
+      ${ind == hoverRow ? 'highlighted' : ''}`} 
+      onMouseOver={()=>setHoverRow(ind)}
+      onMouseOut={() => setHoverRow(-2)}
       onClick={() => toggle(true, ind)}>
         {header}
       </th>

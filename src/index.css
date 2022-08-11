@@ -115,6 +115,10 @@ td{
   border-left: none;
 }
 
+.highlighted{
+  background-color: #55c1ffff;
+}
+
 .selected{
   background-color: #55c1ffff;
 }
