@@ -2,13 +2,17 @@ Implement the selection mechanic -> if you touch a row/col, highlight it, and ad
 Figure out how I'm going to implement the recommendation system. Make a class Recommendation, that 
 takes in a symbol list as its initializer
 Plan out all of the recommendation mechanics
-Implement logic so that if you highlight all the columns, all the rows get highlighted too
-Make error message for when someone selects a row with only one symbol, telling them to select other rows
-    OR : HAVE THE PLAY BUTTON FADED (like a really light grey) when you cannot practice, and otherwise a 
-    much bolder grey
 When nothing is selected on a chart, have a floating arrow that will point to a column or row
 Have symbols enlarge on hover
 Background Music
 Have a counter for how many reps someone has gotten (requires backend)
 Change play button art to a wug with a play button in the middle
 Indicate to the user for the first time that they can highlight a cell
+Phighting Phonetics
+Think about logo
+
+
+Questions to ask:
+- How do I show/tell the user that they can select columns?
+    Add tooltip/one time arrow pointing to something
+- How do I show/tell the user that they can click on the buttons to replay the audio?

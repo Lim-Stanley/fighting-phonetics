@@ -9,9 +9,9 @@ const TopBar = () => {
                 <img draggable={false} className='wug' src={wug} alt='Wug' />
             </Link>
             <div className='dropdowns'>
-                <Dropdown />
-                <Dropdown />
-                <Dropdown />
+                <Dropdown title='English Sounds' options={['English Consonants','English Vowels']}/>
+                <Dropdown title='International Sounds' options={['International Consonants', 'International Vowels']}/>
+                <Dropdown title='Non-pulmonic Sounds' options={['Clicks, Implosives, and Ejectives']}/>
             </div>
         </div>
     )

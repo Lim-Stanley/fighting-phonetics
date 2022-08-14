@@ -1,7 +1,12 @@
-const Dropdown = () => {
+const Dropdown = ({title, options}) => {
     return (
         <div className='dropdown'>
-            Dropdown
+            <h1>{title}</h1>
+            <ul className = 'dd-menu'>
+                {options.map(option => 
+                <li className = 'dd-menu-item'>{option}</li>
+                )}
+            </ul>
         </div>
     )
 }

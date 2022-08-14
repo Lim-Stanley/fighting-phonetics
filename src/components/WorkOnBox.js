@@ -14,8 +14,9 @@ const WorkOnBox = ({history}) => {
           <hr className='work-on-line'/>
           <div className = "trouble-symbols">
             {getRecs().map(([symbol, correct, total, confusedWith], index) => 
-            <h1 key={index}>{symbol} : {Math.floor(100 * (correct/ total))}% {correct} / {total} Confused with:
-            {Array.from(confusedWith).join(', ')}</h1>)}
+            <h1 key={index}>{symbol} : {Math.floor(100 * (correct/ total))}% ({correct} / {total})
+            <h4 class='confused'>Confused with:
+            {Array.from(confusedWith).join(', ')}</h4></h1>)}
           </div>
         </div>
     )
