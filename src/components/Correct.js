@@ -1,10 +1,10 @@
 import audioIconGreen from '../images/audio-icon-green.png'
 
-const Correct = ({guess, handleGuess}) => {
+const Correct = ({guess, handleGuess, playSound}) => {
     return (
         <>
             <div className='good-message'>Correct! How Do You Feel?</div>
-            <div className='good-answer'>
+            <div className='good-answer' onClick={() => playSound(guess)}>
                 Answer:<br />{guess}
                 <img draggable={false} className='audio-icon' src={audioIconGreen} alt='audio-icon' />
             </div>

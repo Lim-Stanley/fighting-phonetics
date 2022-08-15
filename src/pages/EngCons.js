@@ -93,7 +93,15 @@ const EngCons = () => {
       if (!canPlay) {return}
       canPlay = false
       new Audio(sound[answer]).play()
-      setTimeout(() => canPlay = true, 1500)
+      setTimeout(() => canPlay = true, 1000)
+    }
+
+    let canPlayInput = true
+    const playSoundInput = (symbol) => {
+      if (!canPlayInput) {return}
+      canPlayInput = false
+      new Audio(sound[symbol]).play()
+      setTimeout(() => canPlayInput = true, 500)
     }
 
     const clickProcess = (id) => {
@@ -121,7 +129,7 @@ const EngCons = () => {
       <div className='display-body'>
         <WorkOnBox history={history}/>
         {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
-        handleGuess={handleGuess} /> :
+        handleGuess={handleGuess} playSound={playSoundInput}/> :
         <div className='ipa-table'>
           <h1 className='page-title'>English Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} 

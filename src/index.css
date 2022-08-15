@@ -230,6 +230,10 @@ td{
   cursor: pointer;
 }
 
+.good-answer:hover{
+  border: medium solid #55c1ff;
+}
+
 .user-feedback-bar{
   width: 100%;
   display: flex;
@@ -244,6 +248,10 @@ td{
   font-size: 3em;
   border: medium solid #555b6e;
   border-radius: 4% / 12%;
+}
+
+.user-feedback:hover{
+  border: medium solid #55c1ff;
 }
 
 .user-feedback.good{
@@ -285,6 +293,10 @@ td{
   border: medium solid #555b6e;
 }
 
+.bad-answer:hover{
+  border: medium solid #55c1ff
+}
+
 .bad-answer.selected{
   background-color: #f582ae;
   border-radius: 6% / 15%;
@@ -311,4 +323,8 @@ td{
   border: medium solid #555b6e;
   border-radius: 2% / 15%;
   cursor: pointer;
+}
+
+.bad-continue:hover{
+  border: medium solid #55c1ff;
 }
