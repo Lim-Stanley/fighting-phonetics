@@ -1,13 +1,22 @@
 const Correct = ({guess, handleGuess}) => {
     return (
         <>
-            <h1>Correct!</h1>
-            <h2>The answer is:</h2>
-            <h2>{guess}</h2>
-            <h2>How did you feel about this symbol?</h2>
-            <h3 onClick={() => handleGuess(guess, 1)}>Good</h3>
-            <h3 onClick={() => handleGuess(guess, 2)}>Alright</h3>
-            <h3 onClick={() => handleGuess(guess, 3)}>Bad</h3>
+            <div className='good-message'>Correct! How do you feel?</div>
+            <div className='good-answer'>Answer:<br />{guess}</div>
+            <div className='user-feedback-bar'>
+                <div className='user-feedback good' onClick={() => handleGuess(guess, 1)}>
+                    Feeling Great!
+                    <h5>(Confident)</h5>
+                </div>
+                <div className='user-feedback medium' onClick={() => handleGuess(guess, 2)}>
+                    Felt alright!
+                    <h5>(Not fully confident)</h5>
+                </div>
+                <div className='user-feedback bad' onClick={() => handleGuess(guess, 3)}>
+                    Give me more!
+                    <h5>(Unconfident)</h5>
+                </div>
+            </div>
         </>
     )
 }

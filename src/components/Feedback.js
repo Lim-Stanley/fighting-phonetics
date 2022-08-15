@@ -3,11 +3,10 @@ import Incorrect from "./Incorrect"
 
 const Feedback = ({guess, prev, handleGuess}) => {
     return(
-        <>
-            <h1>This is Feedback</h1>
+        <div className='feedback'>
             {prev===guess ? <Correct handleGuess={handleGuess} guess={guess}/> : 
             <Incorrect guess={guess} prev={prev} handleGuess={handleGuess} />}
-        </>
+        </div>
     )
 }
 export default Feedback

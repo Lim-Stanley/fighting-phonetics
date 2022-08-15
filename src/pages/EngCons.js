@@ -118,10 +118,10 @@ const EngCons = () => {
   return (
     <div className='container'>
       <TopBar />
-      {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
-      handleGuess={handleGuess} /> :
       <div className='display-body'>
         <WorkOnBox history={history}/>
+        {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
+        handleGuess={handleGuess} /> :
         <div className='ipa-table'>
           <h1 className='page-title'>English Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} 
@@ -130,8 +130,8 @@ const EngCons = () => {
           <img draggable={false} className = 'play-button' src={answer ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>
+        }
       </div>
-      }
     </div>
   );
 };

@@ -10,6 +10,8 @@ Change play button art to a wug with a play button in the middle
 Indicate to the user for the first time that they can highlight a cell
 Phighting Phonetics
 Think about logo
+Add default text to the to work on bar
+Make dropdown highlighting better
 
 
 Questions to ask:

@@ -1,12 +1,12 @@
 const Incorrect = ({prev, guess, handleGuess}) => {
     return (
         <>
-            <h1>Incorrect!</h1>
-            <h2>You thought it was:</h2>
-            <h2>{guess}</h2>
-            <h2>Answer:</h2>
-            <h2>{prev}</h2>
-            <h2 onClick={() => handleGuess(prev, 3, false, guess)}>Keep Practicing</h2>
+            <div className='bad-message'>Incorrect!</div>
+            <div className='bad-answers'>
+                <div className='bad-answer selected'>Selected:<br />{guess}</div>
+                <div className='bad-answer answer'>Answer:<br />{guess}</div>
+            </div>
+            <h2 onClick={() => handleGuess(prev, 3, false, guess)}>Keep Practicing {'-->'}</h2>
         </>
     )
 }
