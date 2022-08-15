@@ -12,6 +12,8 @@ Phighting Phonetics
 Think about logo
 Add default text to the to work on bar
 Make dropdown highlighting better
+Make the feedback play sounds
+Add audio icon on feedback
 
 
 Questions to ask:
