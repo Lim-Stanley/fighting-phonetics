@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/fighting-phonetics" element={<HomePage />} />
           <Route path="/english-consonants" element={<EngCons />} />
           <Route path="/english-vowels" element={<EngVowels />} />
           <Route path="/international-consonants" element={<IntCons />} />

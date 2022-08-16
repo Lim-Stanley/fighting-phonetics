@@ -6,7 +6,7 @@ import gloves from '../images/gloves.png'
 const TopBar = () => {
     return(
         <div className='top-bar'>
-            <Link to="/">
+            <Link to="/fighting-phonetics">
                 <img draggable={false} className='logo' src={gloves} alt='logo' />
             </Link>
             <div className='dropdowns'>
@@ -14,7 +14,7 @@ const TopBar = () => {
                 <Dropdown title='International Sounds' options={['International Consonants', 'International Vowels']}/>
                 <Dropdown title='Non-pulmonic Sounds' options={['Clicks, Implosives, and Ejectives']}/>
             </div>
-            <Link to="/">
+            <Link to="/fighting-phonetics">
                 <img draggable={false} className='wug' src={wug} alt='wug' />
             </Link>
         </div>
