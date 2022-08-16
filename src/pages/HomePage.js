@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import gloves from '../images/gloves_white.png'
+import gloves from '../images/gloves.png'
 
 const HomePage = () => {
   return (

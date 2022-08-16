@@ -25,15 +25,8 @@ sound recognition
 
 
 
-font-family: 'Arima', cursive;
-font-family: 'Baloo Paaji 2', cursive;
-font-family: 'Baumans', cursive;
-font-family: 'Chewy', cursive;
-font-family: 'Concert One', cursive;
-font-family: 'DynaPuff', cursive;
-font-family: 'Milonga', cursive;
+font-family: 'Arima', cursive; 
 font-family: 'Overlock', cursive;
-font-family: 'Yeseva One', cursive;
 
 - Spectrogram training (Acoustic phonetics, vowels (general))
     Given highlighted area in spectrogram, identify the type 

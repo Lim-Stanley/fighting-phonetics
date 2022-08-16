@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Overlock', cursive;
 }
 
 table, th, td {
@@ -31,6 +32,11 @@ td{
   width: 35%;
 }
 
+.logo{
+  height: 100%;
+  cursor: pointer;
+}
+
 .homepage-row{
   display: flex;
   width: 100%;
@@ -57,18 +63,22 @@ td{
 }
 
 .wug{
+  position: absolute;
   height: 100%;
   width: auto;
+  top: 0px;
+  right: 0px;
 }
 
 .dropdowns{
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   display:flex;
   align-items: row;
   justify-content: space-evenly;
   top: 10%;
+  left: 10%;
 }
 
 .dropdown{
@@ -102,7 +112,7 @@ td{
 }
 
 .dd-title:hover{
-  background-color: #89b0af;
+  background-color: #ffd6ba;
 }
 
 a{
@@ -114,7 +124,7 @@ a{
 }
 
 .dd-menu-item:hover{
-  background-color: #89b0af;
+  background-color: #ffd6ba;
 }
 
 .display-body{
