@@ -11,7 +11,7 @@ table, th, td {
 
 th{
   user-select: none;
-  font-size: 175%;
+  font-size: 135%;
 }
 
 th:hover{
@@ -45,7 +45,7 @@ td{
   border: medium solid black;
   border-radius: 20%;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 2%;
 }
 
@@ -55,7 +55,7 @@ td{
 }
 
 .homepage-symbol{
-  font-size: 5.2em;
+  font-size: 5.4em;
 }
 
 .logo{
@@ -137,6 +137,7 @@ td{
   height: 80%;
   border-top-left-radius: 2% 15%;
   border-top-right-radius: 2% 15%;
+  font-size: 85%;
   cursor: pointer;
   user-select: none;
   border: 3px solid black;

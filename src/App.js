@@ -1,5 +1,5 @@
 // Want to first set up pages
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import EngCons from "./pages/EngCons";
 import EngVowels from "./pages/EngVowels";
@@ -9,7 +9,7 @@ import NonPulmonic from "./pages/NonPulmonic";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div>
         <Routes>
           <Route path="/fighting-phonetics" element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
           <Route path="/non-pulmonic" element={<NonPulmonic />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
