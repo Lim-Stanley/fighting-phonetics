@@ -88,6 +88,13 @@ td{
   right: 1%;
 }
 
+.homepage-name{
+  color: white;
+  position: absolute;
+  left: 91%;
+  top: 95%;
+}
+
 .container{
   width: 100vw;
   height: 100vh;

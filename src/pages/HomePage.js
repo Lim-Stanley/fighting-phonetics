@@ -22,6 +22,7 @@ const HomePage = () => {
           <h1 className='homepage-symbol'>[ɠ]</h1>To Non-Pulmonic Sounds</Link>
         <Link className='homepage-link' to="/international-vowels">
           <h1 className='homepage-symbol'>[i]</h1>To International Vowels</Link>
+        <h5 className='homepage-name'>Created by Stanley Lim</h5>
       </div>
     </div>
   );
