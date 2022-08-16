@@ -53,7 +53,11 @@ const IntCons = () => {
 
     // Toggles a selected row on or off
     const toggle = (isRow, index) => {
-      if (!isRow) {
+      if (selected.rows.length == rows.length || selected.cols.length == cols.length){
+        if (isRow) { setSelected({rows: [index], cols: []})}
+        else {setSelected({rows: [], cols: [index * 2, index * 2 + 1]})}
+      }
+      else if (!isRow) {
         if (selected.cols.includes(index * 2)){
           setSelected({...selected, cols : selected.cols.filter(col => col != index * 2 && col != index * 2 + 1)})}
         else{ setSelected({...selected, cols : [...selected.cols, index * 2, index * 2 + 1]})}

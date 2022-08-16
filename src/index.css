@@ -37,10 +37,25 @@ td{
 }
 
 .homepage-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 15%;
   background-color: #ffd6ba;
   border: medium solid black;
-  border-radius: 4%;
+  border-radius: 20%;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 2%;
+}
+
+.homepage-link.upper{
+  position:relative;
+  bottom: 40%;
+}
+
+.homepage-symbol{
+  font-size: 5.2em;
 }
 
 .logo{
