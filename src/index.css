@@ -85,7 +85,6 @@ td{
 .homepage-title.two{
   position: relative;
   color: #89b0af;
-  right: 1%;
 }
 
 .homepage-name{
@@ -286,8 +285,14 @@ a{
   height: auto;
   cursor: pointer;
 }
+
+
 .play-button.international{
   width: 5%;
+}
+
+.play-button.gray{
+  cursor: auto;
 }
 
 .feedback{

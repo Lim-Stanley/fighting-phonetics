@@ -150,7 +150,7 @@ const IntCons = () => {
           <Table toggle={toggle} setAll={selectAll} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
           inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} colSpan={2}/>
-          <img draggable={false} className = 'play-button international' src={answer ? PlayButton : GrayedButton} 
+          <img draggable={false} className ={`play-button international ${answer ? 'black' : 'gray'}`} src={answer ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>
         }
