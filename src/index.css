@@ -134,6 +134,7 @@ a{
   width: 100%;
   align-items: row;
   padding: 3%;
+  justify-content: space-around;
 }
 
 .to-work-on{
@@ -225,6 +226,11 @@ a{
 .selected{
   background-color: #55c1ff;
 }
+
+.symbol.selected:hover{
+  background-color:#bee3db;
+}
+
 .play-button{
   margin: 1%;
   width: 10%;
@@ -272,7 +278,7 @@ a{
 }
 
 .good-answer:hover{
-  border: medium solid #55c1ff;
+  background-color: #55c1ff;
 }
 
 .user-feedback-bar{
@@ -291,9 +297,6 @@ a{
   border-radius: 4% / 12%;
 }
 
-.user-feedback:hover{
-  border: medium solid #55c1ff;
-}
 
 .user-feedback.good{
   background-color: #bee3db;
@@ -305,6 +308,10 @@ a{
 
 .user-feedback.bad{
   background-color: #f582ae;
+}
+
+.user-feedback:hover{
+  background-color: #55c1ff;
 }
 
 .bad-message{
@@ -334,10 +341,6 @@ a{
   border: medium solid #555b6e;
 }
 
-.bad-answer:hover{
-  border: medium solid #55c1ff
-}
-
 .bad-answer.selected{
   background-color: #f582ae;
   border-radius: 6% / 15%;
@@ -346,6 +349,10 @@ a{
 .bad-answer.answer{
   background-color: #bee3db;
   border-radius: 8% / 15%;
+}
+
+.bad-answer:hover{
+  background-color: #55c1ff;
 }
 
 .audio-icon{
@@ -367,5 +374,5 @@ a{
 }
 
 .bad-continue:hover{
-  border: medium solid #55c1ff;
+  background-color: #55c1ff;
 }

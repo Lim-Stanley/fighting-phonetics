@@ -20,6 +20,7 @@ const EngCons = () => {
       ['', '', '', '', '', '', '', 'l', '', '', '', '', '', '', '', '']
     ]
     const cols = rows[0].map((_, colIndex) => rows.map(row => row[colIndex]));
+    const colSpan = 2;
     
     const initHistory = () => {
       let ans = {}
@@ -105,7 +106,7 @@ const EngCons = () => {
     }
 
     const clickProcess = (id) => {
-        if (!answer) {return}
+        if (!answer || id == '') {return}
         setGuess(id)
         setPrev(answer)
         setShowFeedback(true)
@@ -120,14 +121,20 @@ const EngCons = () => {
       setShowFeedback(false)
       setHistory(history)
     }
-    console.log(history)
 
+    const hasReqs = () => {
+      for (const [key, value] of Object.entries(history)){
+        if (value.correct / value.total < .8) return true
+      }
+      return false
+    }
     const answer = getSymbol()
+    console.log(answer)
   return (
     <div className='container'>
       <TopBar />
       <div className='display-body'>
-        <WorkOnBox history={history}/>
+        {hasReqs() ? <WorkOnBox history={history}/> : null}
         {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
         handleGuess={handleGuess} playSound={playSoundInput}/> :
         <div className='ipa-table'>

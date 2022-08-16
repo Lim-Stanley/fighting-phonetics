@@ -13,6 +13,8 @@ Think about logo
 Add default text to the to work on bar
 Make dropdown highlighting better
 Make the feedback play sounds
+Change toggle function for colspan of non-pulmonics
+Don't highlight non-symbols
 
 Questions to ask:
 - How do I show/tell the user that they can select columns?

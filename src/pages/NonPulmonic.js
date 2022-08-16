@@ -101,7 +101,7 @@ const NonPulmonic = () => {
     }
 
     const clickProcess = (id) => {
-        if (!answer) {return}
+        if (!answer || id == '') {return}
         setGuess(id)
         setPrev(answer)
         setShowFeedback(true)
@@ -116,14 +116,20 @@ const NonPulmonic = () => {
       setShowFeedback(false)
       setHistory(history)
     }
-    console.log(history)
+
+    const hasReqs = () => {
+      for (const [key, value] of Object.entries(history)){
+        if (value.correct / value.total < .8) return true
+      }
+      return false
+    }
 
     const answer = getSymbol()
   return (
     <div className='container'>
       <TopBar />
       <div className='display-body'>
-        <WorkOnBox history={history}/>
+        {hasReqs() ? <WorkOnBox history={history}/> : null}
         {showFeedback ? <Feedback setShowFeedback={setShowFeedback} prev={prev} guess={guess}
         handleGuess={handleGuess} playSound={playSoundInput}/> :
         <div className='ipa-table'>

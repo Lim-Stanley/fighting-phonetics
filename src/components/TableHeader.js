@@ -14,7 +14,7 @@ const TableHeader = ({ corner, headings, setAll, toggle, inSelected, setHovering
         <th
           key={index + 1}
           colSpan={colSpan}
-          className= {`header ${inSelected(false, index * 2) ? 'selected' : ''}
+          className= {`header ${inSelected(false, index * colSpan) ? 'selected' : ''}
         ${isHovering(false, index) ? 'highlighted' : ''}`}
           onMouseOver={() => setHovering({row: -2, col: index})}
           onMouseOut={() => setHovering({row: -2, col: -2})}
