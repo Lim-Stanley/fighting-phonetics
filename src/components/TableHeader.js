@@ -1,23 +1,19 @@
-const TableHeader = ({ corner, headings, setAll, toggle, inSelected, setHovering, isHovering, colSpan}) => {
+const TableHeader = ({ corner, headings, setAll, toggle, inSelected, colSpan}) => {
 
   const allSelected = () => {
-      return Array.from(Array(headings.length).keys()).every((elem) => inSelected(false, elem * 2))
+      return Array.from(Array(headings.length).keys()).every((elem) => inSelected(false, elem * colSpan))
   }
   return (
     <tr>
-      <th key={0} className={`header ${allSelected() ? 'selected' : ''} ${isHovering(false, -1) ? 'highlighted' : ''}`} 
-      onClick={() => setAll()}
-      onMouseOver={()=> setHovering({row: -2, col: -1})} onMouseOut={() => setHovering({row: -2, col: -2})}>
+      <th key={0} className={`header ${allSelected() ? 'selected' : ''}`} 
+      onClick={() => setAll()}>
         {corner}
       </th>
       {headings.map((head, index) => (
         <th
           key={index + 1}
           colSpan={colSpan}
-          className= {`header ${inSelected(false, index * colSpan) ? 'selected' : ''}
-        ${isHovering(false, index) ? 'highlighted' : ''}`}
-          onMouseOver={() => setHovering({row: -2, col: index})}
-          onMouseOut={() => setHovering({row: -2, col: -2})}
+          className= {`header ${inSelected(false, index * colSpan) ? 'selected' : ''}`}
           onClick={() => toggle(false, index)}
         >
           {head}

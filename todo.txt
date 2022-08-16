@@ -1,22 +1,7 @@
-Implement the selection mechanic -> if you touch a row/col, highlight it, and add it to 'symbols'
-Figure out how I'm going to implement the recommendation system. Make a class Recommendation, that 
-takes in a symbol list as its initializer
-Plan out all of the recommendation mechanics
-When nothing is selected on a chart, have a floating arrow that will point to a column or row
-Have symbols enlarge on hover
-Background Music
 Have a counter for how many reps someone has gotten (requires backend)
-Change play button art to a wug with a play button in the middle
-Indicate to the user for the first time that they can highlight a cell
-Phighting Phonetics
-Think about logo
-Add default text to the to work on bar
-Make dropdown highlighting better
-Make the feedback play sounds
 Change toggle function for colspan of non-pulmonics
-Don't highlight non-symbols
-
-Questions to ask:
-- How do I show/tell the user that they can select columns?
-    Add tooltip/one time arrow pointing to something
-- How do I show/tell the user that they can click on the buttons to replay the audio?
+Change highlight to ligher blue
+Add streak counter
+Make confetti play every 5 in a row
+Play sound when correct answer is selected
+Make selection go away for certain things... does this make any sense lol

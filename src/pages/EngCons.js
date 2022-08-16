@@ -33,7 +33,6 @@ const EngCons = () => {
     const [guess, setGuess] = useState(false)
     const [showFeedback, setShowFeedback] = useState(false)
     const [selected, setSelected] = useState({rows: [], cols: []})
-    const [hovering, setHovering] = useState({row: -2, col: -2})
     const [history, setHistory] = useState(initHistory())
 
     // Select all
@@ -65,11 +64,6 @@ const EngCons = () => {
     const inSelected = (isRow, index) => {
       if (isRow){ return selected.rows.includes(index) }
       else{ return selected.cols.includes(index) }
-    }
-
-    const isHovering = (isRow, index) => {
-      if (isRow){ return hovering.row == index }
-      else{ return hovering.col == index }
     }
 
     const getSymbol = () => {
@@ -107,6 +101,7 @@ const EngCons = () => {
 
     const clickProcess = (id) => {
         if (!answer || id == '') {return}
+        console.log('clicked')
         setGuess(id)
         setPrev(answer)
         setShowFeedback(true)
@@ -141,7 +136,7 @@ const EngCons = () => {
           <h1 className='page-title'>English Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
-          inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} colSpan={2}/>
+          inSelected={inSelected} colSpan={2}/>
           <img draggable={false} className = 'play-button' src={answer ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>

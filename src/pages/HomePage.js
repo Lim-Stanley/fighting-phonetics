@@ -9,7 +9,8 @@ const HomePage = () => {
       </div>
       <div className='homepage-row two'>
         <Link className='homepage-link' to="/english-consonants">To English Consonants</Link>
-        <h1>fighting phonetics</h1>
+        <h1 className="homepage-title one">fighting</h1>
+        <h1 className="homepage-title two">phonetics</h1>
         <Link className='homepage-link' to="/international-consonants">To International Consonants</Link>
       </div>
       <div className='homepage-row three'>

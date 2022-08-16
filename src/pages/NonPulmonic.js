@@ -11,7 +11,7 @@ const NonPulmonic = () => {
     const headings = ['Bilabial', 'Dental', 'Alveolar', 'Palatoalveolar', 'Alveolar Lateral', 'Velar']
     const headers = ['Clicks', 'Voiced Implosives', 'Ejectives']
     const rows = [
-      ['ʘ', 'ǀ', '!', 'ǂ', 'ǁ', ''],
+      ['ʘ', 'ǀ', 'ǃ', 'ǂ', 'ǁ', ''],
       ['ɓ', '', 'ɗ', '', '' , 'ɠ'],
       ['pʼ', '', 'tʼ', '', '', 'kʼ'],
     ]
@@ -46,9 +46,9 @@ const NonPulmonic = () => {
     // Toggles a selected row on or off
     const toggle = (isRow, index) => {
       if (!isRow) {
-        if (selected.cols.includes(index * 2)){
-          setSelected({...selected, cols : selected.cols.filter(col => col != index * 2 && col != index * 2 + 1)})}
-        else{ setSelected({...selected, cols : [...selected.cols, index * 2, index * 2 + 1]})}
+        if (selected.cols.includes(index)){
+          setSelected({...selected, cols : selected.cols.filter(col => col != index)})}
+        else{ setSelected({...selected, cols : [...selected.cols, index]})}
       }
       else{
         if (selected.rows.includes(index)){ setSelected({...selected, rows : selected.rows.filter(row => row != index)})}
