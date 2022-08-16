@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fighting-phonetics/static/css/main.479362b2.css",
-    "main.js": "/fighting-phonetics/static/js/main.583066cc.js",
+    "main.css": "/fighting-phonetics/static/css/main.2c7e8268.css",
+    "main.js": "/fighting-phonetics/static/js/main.f4c715cf.js",
     "static/js/787.c501ed71.chunk.js": "/fighting-phonetics/static/js/787.c501ed71.chunk.js",
     "static/media/gloves.png": "/fighting-phonetics/static/media/gloves.0b2600eb22ee04791df5.png",
     "static/media/audio-icon.png": "/fighting-phonetics/static/media/audio-icon.ac8cf13d433c33c1b694.png",
@@ -108,12 +108,12 @@
     "static/media/ɬ.ogg": "/fighting-phonetics/static/media/ɬ.0f03fffbe4d132467990.ogg",
     "static/media/ə.ogg": "/fighting-phonetics/static/media/ə.ff954af445ab378e6078.ogg",
     "index.html": "/fighting-phonetics/index.html",
-    "main.479362b2.css.map": "/fighting-phonetics/static/css/main.479362b2.css.map",
-    "main.583066cc.js.map": "/fighting-phonetics/static/js/main.583066cc.js.map",
+    "main.2c7e8268.css.map": "/fighting-phonetics/static/css/main.2c7e8268.css.map",
+    "main.f4c715cf.js.map": "/fighting-phonetics/static/js/main.f4c715cf.js.map",
     "787.c501ed71.chunk.js.map": "/fighting-phonetics/static/js/787.c501ed71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.479362b2.css",
-    "static/js/main.583066cc.js"
+    "static/css/main.2c7e8268.css",
+    "static/js/main.f4c715cf.js"
   ]
 }
