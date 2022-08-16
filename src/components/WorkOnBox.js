@@ -4,7 +4,6 @@ const WorkOnBox = ({history}) => {
       for (const [key, value] of Object.entries(history)){
         if (value.correct / value.total < .8) {ans.push([key, value.correct, value.total, value.confusedWith])}
       }
-      console.log(ans)
       // If ans is none, display "start training" or something
       return ans
     }
@@ -15,8 +14,8 @@ const WorkOnBox = ({history}) => {
           <div className = "trouble-symbols">
             {getRecs().map(([symbol, correct, total, confusedWith], index) => 
             <h1 key={index}>{symbol} : {Math.floor(100 * (correct/ total))}% ({correct} / {total})
-            <h4 class='confused'>Confused with:
-            {Array.from(confusedWith).join(', ')}</h4></h1>)}
+            <div className='confused'>Confused with:
+            {Array.from(confusedWith).join(', ')}</div></h1>)}
           </div>
         </div>
     )

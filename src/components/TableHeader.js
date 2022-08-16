@@ -1,4 +1,4 @@
-const TableHeader = ({ corner, headings, setAll, toggle, inSelected, setHovering, isHovering}) => {
+const TableHeader = ({ corner, headings, setAll, toggle, inSelected, setHovering, isHovering, colSpan}) => {
 
   const allSelected = () => {
       return Array.from(Array(headings.length).keys()).every((elem) => inSelected(false, elem * 2))
@@ -13,7 +13,7 @@ const TableHeader = ({ corner, headings, setAll, toggle, inSelected, setHovering
       {headings.map((head, index) => (
         <th
           key={index + 1}
-          colSpan={2}
+          colSpan={colSpan}
           className= {`header ${inSelected(false, index * 2) ? 'selected' : ''}
         ${isHovering(false, index) ? 'highlighted' : ''}`}
           onMouseOver={() => setHovering({row: -2, col: index})}

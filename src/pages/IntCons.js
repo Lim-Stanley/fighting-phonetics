@@ -9,17 +9,19 @@ import GrayedButton from '../images/grayed_button.png'
 import {sound} from '../commons/Sounds'
 
 const IntCons = () => {
-    const headings = ['Bilabial', 'Labio-Dental', 'Dental', 'Alveolar', 'Post-Alveolar', 'Palatal', 'Velar', 'Glottal']
-    const headers = ['Stops', 'Nasal', 'Flap', 'Fricative', 'Affricate', 'Approximant', 'Lateral Approximant']
+    const headings = ['Bilabial', 'Labio-Dental', 'Dental', 'Alveolar', 'Post-Alveolar', 'Retroflex', 
+    'Palatal', 'Velar', 'Uvular', 'Pharyngeal', 'Glottal']
+    const headers = ['Stops', 'Nasal', 'Trill', 'Tap or Flap', 'Fricative', 'Lateral Fricative', 'Approximant', 'Lateral Approximant']
     const rows = [
-      ['p', 'b', '', '', '', '', 't', 'd', '', '', '', '', 'k', 'g', 'ʔ', ''],
-      ['', 'm', '', '' ,'', '', '', 'n', '', '', '' ,'', '', 'ŋ', '', ''],
-      ['', '', '', '', '', '', '', 'ɾ', '', '', '', '', '', '', '', ''],
-      ['', '', 'f', 'v', 'θ', 'ð', 's', 'z', 'ʃ', 'ʒ', '', '', '', '', 'h', ''],
-      ['', '', '', '', '', '', '', '', 'tʃ', 'dʒ', '', '', '', '', '', ''],
-      ['', 'w', '', '', '', '', '', 'ɹ', '', '', '', 'j', '', 'w', '', ''],
-      ['', '', '', '', '', '', '', 'l', '', '', '', '', '', '', '', '']
-    ]
+      ['p', 'b', '', '', '', '', 't', 'd', '', '', 'ʈ', 'ɖ', 'c', 'ɟ', 'k', 'g', 'q', 'ɢ', '','', 'ʔ', ''],
+      ['', 'm', '', 'ɱ', '', '', '', 'n', '', '', '', 'ɳ', '', 'ɲ', '', 'ŋ', '', 'ɴ', '','', '', ''],
+      ['', 'ʙ', '', '', '', '', '', 'r', '', '', '', '', '', '', '', '', '', 'ʀ', '','', '', ''],
+      ['', '', '', 'ⱱ', '', '', '', 'ɾ', '', '', '', 'ɽ', '', '', '', '', '', '', '', '', '', ''],
+      ['ɸ', 'β', 'f', 'v', 'θ', 'ð', 's', 'z', 'ʃ', 'ʒ', 'ʂ', 'ʐ', 'ç', 'ʝ', 'x', 'ɣ', 'χ', 'ʁ', 'ħ', 'ʕ', 'h', 'ɦ'],
+      ['', '', '', '', '', '', 'ɬ', 'ɮ', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+      ['', 'w', '', 'ʋ', '', '', '', 'ɹ', '', '', '', 'ɻ', '', 'j', '', 'ɰ', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', 'l', '', '', '', 'ɭ', '', 'ʎ', '', 'ʟ', '', '', '', '', '', '']
+]
     const cols = rows[0].map((_, colIndex) => rows.map(row => row[colIndex]));
     
     const initHistory = () => {
@@ -91,6 +93,7 @@ const IntCons = () => {
     // Play the selected sound
     let canPlay = true
     const playSound = () => {
+        console.log(canPlay, answer)
       if (!canPlay) {return}
       canPlay = false
       new Audio(sound[answer]).play()
@@ -106,7 +109,7 @@ const IntCons = () => {
     }
 
     const clickProcess = (id) => {
-        if (!answer) {return}
+        if (!answer || id == '') {return}
         setGuess(id)
         setPrev(answer)
         setShowFeedback(true)
@@ -121,9 +124,9 @@ const IntCons = () => {
       setShowFeedback(false)
       setHistory(history)
     }
-    console.log(history)
 
     const answer = getSymbol()
+    console.log(answer)
   return (
     <div className='container'>
       <TopBar />
@@ -135,8 +138,8 @@ const IntCons = () => {
           <h1 className='page-title'>International Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
-          inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} />
-          <img draggable={false} className = 'play-button' src={answer ? PlayButton : GrayedButton} 
+          inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} colSpan={2}/>
+          <img draggable={false} className = 'play-button international' src={answer ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>
         }

@@ -7,7 +7,7 @@ import b from '../sounds/b.ogg'
 import ʙ from '../sounds/ʙ.ogg'
 import ɓ from '../sounds/ɓ.ogg'
 import c from '../sounds/c.ogg'
-import ç from '../sounds/ç.ogg'
+import ç from '../sounds/ç.ogg'
 import d from '../sounds/d.ogg'
 import ð from '../sounds/ð.ogg'
 import dʒ from '../sounds/dʒ.ogg'
@@ -80,6 +80,7 @@ import ɰ from '../sounds/ɰ.ogg'
 import ʊ from '../sounds/ʊ.ogg'
 import v from '../sounds/v.ogg'
 import ʋ from '../sounds/ʋ.ogg'
+import ⱱ from '../sounds/ⱱ.ogg'
 import ʌ from '../sounds/ʌ.ogg'
 import w from '../sounds/w.ogg'
 import x from '../sounds/x.ogg'
@@ -109,7 +110,7 @@ const sound = {
 'ʙ' : ʙ ,
 'ɓ' : ɓ ,
 'c' : c ,
-'c' : ç,  
+'ç' : ç ,  
 'd' : d ,
 'ð' : ð ,
 'dʒ' : dʒ,
@@ -182,6 +183,7 @@ const sound = {
 'ʊ' : ʊ ,
 'v' : v ,
 'ʋ' : ʋ ,
+'ⱱ' : ⱱ ,
 'ʌ' : ʌ ,
 'w' : w ,
 'x' : x ,

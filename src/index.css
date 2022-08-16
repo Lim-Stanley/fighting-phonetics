@@ -221,6 +221,9 @@ a{
   height: auto;
   cursor: pointer;
 }
+.play-button.international{
+  width: 5%;
+}
 
 .feedback{
   display:flex;

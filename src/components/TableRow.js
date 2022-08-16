@@ -1,4 +1,4 @@
-const TableRow = ({ header, columns, handleClick, toggle, ind, inSelected, setHovering, isHovering}) => {
+const TableRow = ({ header, columns, handleClick, toggle, ind, inSelected, setHovering, isHovering, colSpan}) => {
   return (
     <tr>
       <th key={ind} className={`header ${inSelected(true, ind) || inSelected(true, ind) ? 'selected' : ''}
@@ -12,7 +12,7 @@ const TableRow = ({ header, columns, handleClick, toggle, ind, inSelected, setHo
         <td key={index + 1} 
         className={`symbol ${col != "" ? "filled" : ""} 
         ${inSelected(true, ind) || inSelected(false, index) ? 'selected' : ''}
-        ${index % 2 == 0 ? 'even-box' : 'odd-box'}`} 
+        ${colSpan == 1 ? '' : index % 2 == 0 ? 'even-box' : 'odd-box'} : ''`} 
         onClick = {() => handleClick(col)}>
           {col}
         </td>

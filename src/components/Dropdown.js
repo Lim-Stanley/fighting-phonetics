@@ -11,8 +11,8 @@ const Dropdown = ({title, options}) => {
         <div className='dropdown'>
             <h1 className='dd-title'>{title}</h1>
             <ul className = 'dd-menu'>
-                {options.map(option => 
-                <Link to={`/${linkOf[option]}`}>
+                {options.map((option, index) => 
+                <Link key={index} to={`/${linkOf[option]}`}>
                     <li className = 'dd-menu-item'>{option}</li>
                 </Link>
                 )}

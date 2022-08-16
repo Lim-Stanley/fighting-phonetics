@@ -134,7 +134,7 @@ const EngCons = () => {
           <h1 className='page-title'>English Consonants</h1>
           <Table toggle={toggle} setAll={selectAll} 
           handleClick = {clickProcess} headings={headings} headers={headers} rows={rows}
-          inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} />
+          inSelected={inSelected} setHovering={setHovering} isHovering={isHovering} colSpan={2}/>
           <img draggable={false} className = 'play-button' src={answer ? PlayButton : GrayedButton} 
           alt="Play Button" onClick={playSound} />
         </div>
