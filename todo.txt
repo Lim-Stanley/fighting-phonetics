@@ -1,6 +1,4 @@
 Have a counter for how many reps someone has gotten (requires backend)
-Change toggle function for colspan of non-pulmonics
-Change highlight to ligher blue
 Add streak counter
 Make confetti play every 5 in a row
 Play sound when correct answer is selected

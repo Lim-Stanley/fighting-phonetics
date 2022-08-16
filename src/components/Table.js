@@ -6,7 +6,7 @@ const Table = ({handleClick, headers, headings, rows, setWeights, setAll, toggle
   return (
     <table className="cons-table">
         <tbody>
-        <TableHeader colSpan={colSpan} setAll={setAll} corner = 'All' headings = {headings} toggle={toggle} 
+        <TableHeader colSpan={colSpan} setAll={setAll} corner = 'All' headings = {headings} headers={headers} toggle={toggle} 
         inSelected={inSelected} />
         {headers.map((head, index) =>
         <TableRow setWeights={setWeights}

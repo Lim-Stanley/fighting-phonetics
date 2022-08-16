@@ -40,7 +40,7 @@ const IntCons = () => {
 
     // Select all
     const selectAll = () => {
-      if (selected.rows.length == rows.length || selected.cols.length == cols.length){
+      if (selected.rows.length == rows.length && selected.cols.length == cols.length){
         setSelected({rows: [], cols: []})
       }
       else{
@@ -49,6 +49,7 @@ const IntCons = () => {
         })
       }
     }
+
 
     // Toggles a selected row on or off
     const toggle = (isRow, index) => {
