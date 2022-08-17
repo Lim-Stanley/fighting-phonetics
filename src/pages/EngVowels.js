@@ -9,13 +9,14 @@ import {sound} from '../commons/Sounds'
 
 const EngVowels = () => {
     const headings = ['Front', '', 'Mid', '', 'Back']
-    const headers = ['Close', '', 'Close-mid', '', 'Open-mid', 'Open']
+    const headers = ['Close', '', 'Close-mid', '', 'Open-mid', '', 'Open']
     const rows = [
       ['i', '', '', '', '', '', '', '', '', 'u'],
       ['', '', 'ɪ', '', '' ,'' ,'', 'ʊ', '', ''],
       ['e', '', '', '', '', '', '', '', '', 'o'],
       ['', '', '', '','ə', '','', '', '', ''],
       ['ɛ', '', '', '', '', '', '', '', 'ʌ', 'ɔ'],
+      ['æ', '', '', '', '', '', '', '', '', ''],
       ['a', '', '', '', '' ,'' ,'', '', 'ɑ', ''],
     ]
     const cols = rows[0].map((_, colIndex) => rows.map(row => row[colIndex]));
