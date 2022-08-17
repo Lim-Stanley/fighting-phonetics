@@ -5,7 +5,7 @@ import Feedback from "../components/Feedback"
 import TopBar from '../components/TopBar';
 import PlayButton from '../images/play_button.png'
 import GrayedButton from '../images/grayed_button.png'
-import {sound} from '../commons/Sounds'
+import {sound} from '../sounds/Sounds'
 
 const EngVowels = () => {
     const headings = ['Front', '', 'Mid', '', 'Back']
