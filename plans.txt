@@ -2,4 +2,10 @@ Have a counter for how many reps someone has gotten (requires backend)
 Add streak counter
 Make confetti play every 5 in a row
 Play sound when correct answer is selected
-Make selection go away for certain things... does this make any sense lol
+Make selection go away for certain things... 
+Have tooltips for each sound - when the user gets it wrong, remind them of what words use that sound 
+Implement full word training
+Implement a tone page
+Implement spectrogram reading
+Implement diacritic training reading
+Implement gestural scores
