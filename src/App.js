@@ -9,10 +9,10 @@ import NonPulmonic from "./pages/NonPulmonic";
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename='/fighting-phonetics'>
       <div>
         <Routes>
-          <Route path="/fighting-phonetics" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/english-consonants" element={<EngCons />} />
           <Route path="/english-vowels" element={<EngVowels />} />
           <Route path="/international-consonants" element={<IntCons />} />
