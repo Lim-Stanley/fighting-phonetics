@@ -34,12 +34,16 @@ To open the application locally, in the project directory, run:
 
 ##### Usage
 To start learning, simply click on one of the pages shown on the home screen.
+<img width="1421" alt="tutorial-homepage" src="https://user-images.githubusercontent.com/92659795/185745647-d0b2b396-f50a-480e-958b-a931e1b3a8c1.png">
 
 To select sounds that you wish to study, click on the respective row or column to highlight those symbols.
+<img width="1131" alt="tutorial-selection" src="https://user-images.githubusercontent.com/92659795/185745651-ac05d722-d881-4516-b3d0-c87749721002.png">
 
 Play the currently tested sound by clicking the play button, and select your guess for the sound by clicking the respective symbol inside the table.
+<img width="1131" alt="tutorial-play" src="https://user-images.githubusercontent.com/92659795/185745655-e166289d-4757-4aec-8d9b-248a68fef397.png">
 
 After correctly answering a question, give feedback so that the recommendation algorithm can cater to your currently level and optimize your learning!
+<img width="1131" alt="tutorial-feedback" src="https://user-images.githubusercontent.com/92659795/185745660-f52b2057-d12b-406a-9b87-15c2bb2f1b93.png">
 
 ## Features
 ##### Spaced repetition-based recommendation algorithm
